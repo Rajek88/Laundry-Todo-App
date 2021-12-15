@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rajendra's To Do App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rajendra Kulkarni" />
+    <meta
+      name="description"
+      content="This TODO app is developed by Rajendra Kulkarni in pure html, css and javascript"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ************************** MAIN CONTAINER******************************* -->
+    <main class="container">
+      <!-- Title header -->
+      <h1 style="color: rgb(10, 10, 10)">To Do App</h1>
+      <!-- I'll show my apps status here up above -->
+      <div class="status-container"></div>
+      <!-- *******************************INPUT SECTION********************************************* -->
+      <div class="input-section">
+        <input
+          id="input-bar"
+          type="text"
+          placeholder="Type your todo list "
+          required
+        />
+        <button id="input-btn2" onclick="newlist();">+</button>
+      </div>
+      <!-- *****************************************List Container******************************************** -->
+      <div class="list-container">
+        <!-- *************************************INITIAL LIST 1************************************************** -->
+        <div class="list">
+          <input
+            class="list-radio"
+            type="checkbox"
+            onclick="checkedBox(this)"
+            data-checked="false"
+          />
+          <h3>
+            <textarea>
+"Go to laundry and bring back done clothes carefully"
+            </textarea>
+          </h3>
+          <button type="button" class="delete-list" onclick="deleteList(this)">
+            Delete
+          </button>
+        </div>
+        <!-- ***************************************Initial List 2************************************************* -->
+        <div class="list">
+          <input
+            class="list-radio"
+            type="checkbox"
+            onclick="checkedBox(this)"
+            data-checked="false"
+          />
+          <h3>
+            <textarea>
+This app is developed by Rajendra Kulkarni in pure html, css and javascript
+          </textarea
+            >
+          </h3>
+          <button type="button" class="delete-list" onclick="deleteList(this)">
+            Delete
+          </button>
+        </div>
+      </div>
+      <hr class="hline" />
+    </main>
+    <!-- **********************************Here I include js file************************************************* -->
+    <script src="js/todo.js"></script>
+  </body>
+</html>
